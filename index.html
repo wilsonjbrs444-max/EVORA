@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>EVORA — Pilote ta situation</title>
+  <meta name="theme-color" content="#06241B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="auth" hidden></main>
+
+  <div id="app" class="shell" hidden>
+    <aside class="sidebar" aria-label="Navigation principale">
+      <a class="brand" href="#/accueil" aria-label="EVORA — Accueil"></a>
+      <nav id="nav"></nav>
+    </aside>
+
+    <div class="content">
+      <header class="topbar">
+        <h1 id="page-title">Accueil</h1>
+        <div class="userchip">
+          <a href="#/profil" class="avatar" id="avatar" aria-label="Mon profil"></a>
+          <span class="uname" id="uname"></span>
+          <button class="iconbtn" data-action="logout" aria-label="Se déconnecter" title="Se déconnecter"></button>
+        </div>
+      </header>
+      <main id="view" tabindex="-1"></main>
+    </div>
+
+    <nav class="bottomnav" id="bottomnav" aria-label="Navigation mobile"></nav>
+  </div>
+
+  <dialog id="modal"></dialog>
+  <div id="toasts" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
